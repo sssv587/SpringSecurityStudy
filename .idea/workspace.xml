@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d70dde85-e2b2-44a1-913a-a6391a649db8" name="Changes" comment="用户认证">
-      <change afterPath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/config/SecurityConfigTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/service/MyUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="d70dde85-e2b2-44a1-913a-a6391a649db8" name="Changes" comment="用户认证(设置用户名和密码)">
+      <change afterPath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/entity/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/mapper/UsersMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo1/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/SecurityDemo1Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/SecurityDemo1Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/service/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/service/MyUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo1/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo1/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -90,7 +94,7 @@
       <workItem from="1672243693623" duration="2050000" />
       <workItem from="1672327349267" duration="8737000" />
       <workItem from="1672565623149" duration="33000" />
-      <workItem from="1672565693377" duration="1400000" />
+      <workItem from="1672565693377" duration="3086000" />
     </task>
     <task id="LOCAL-00001" summary="git ignore">
       <created>1672244270941</created>
@@ -113,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672336049309</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="用户认证(设置用户名和密码)">
+      <created>1672567129484</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672567129484</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +146,8 @@
     <MESSAGE value="git ignore" />
     <MESSAGE value="init" />
     <MESSAGE value="用户认证" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户认证" />
+    <MESSAGE value="用户认证(设置用户名和密码)" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户认证(设置用户名和密码)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
