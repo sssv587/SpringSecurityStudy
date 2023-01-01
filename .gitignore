@@ -2,3 +2,6 @@
 /security-demo1/target/*
 /security-demo1/.mvn/wrapper/*
 /.idea/workspace.xml
+/.idea/compiler.xml
+/security-demo1/security-demo1.iml
+/security-demo1/HELP.md

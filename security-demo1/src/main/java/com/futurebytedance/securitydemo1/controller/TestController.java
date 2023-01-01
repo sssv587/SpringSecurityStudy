@@ -15,8 +15,16 @@ import org.springframework.web.bind.annotation.RestController;
  *      spring.security.user.password=root
  * 2)配置类:比如SecurityConfig
  * 3)自定义编写实现类:
- *  第一步 创建配置类，设置使用哪个userDetailsService实现类   SecurityConfigTest.java
- *  第二步 编写实现类，返回User对象，User对象有用户名密码和操作权限  MyUserDetailsService.java
+ *    第一步 创建配置类，设置使用哪个userDetailsService实现类   SecurityConfigTest.java
+ *    第二步 编写实现类，返回User对象，User对象有用户名密码和操作权限  MyUserDetailsService.java
+ * 扩展：从数据库中查询密码登录
+ *     1.导入lombok、mybatis-plus-boot-starter、mysql-connector-java 依赖
+ *     2.创建数据库表
+ *     3.创建实体类
+ *     4.继承MybatisPlus的BaseMapper接口
+ *     5.在MyUserDetailsService调用mapper里面的方法查询
+ *     6.启动类标注mapperScan
+ *     7.配置数据库信息
  */
 @RestController
 @RequestMapping("/test")
