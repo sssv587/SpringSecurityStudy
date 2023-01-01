@@ -8,12 +8,11 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class SecurityDemo1Application {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext run = SpringApplication.run(SecurityDemo1Application.class, args);
+        SpringApplication.run(SecurityDemo1Application.class, args);
 
-        String[] beanDefinitionNames = run.getBeanDefinitionNames();
-        for (String beanDefinitionName : beanDefinitionNames) {
-            System.out.println(beanDefinitionName);
-        }
+//        String[] beanDefinitionNames = run.getBeanDefinitionNames();
+//        for (String beanDefinitionName : beanDefinitionNames) {
+//            System.out.println(beanDefinitionName);
+//        }
     }
-
 }

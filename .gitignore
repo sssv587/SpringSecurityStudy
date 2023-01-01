@@ -1,2 +1,4 @@
 /.idea/*
 /security-demo1/target/*
+/security-demo1/.mvn/wrapper/*
+/.idea/workspace.xml

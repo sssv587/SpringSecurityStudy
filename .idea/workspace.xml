@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d70dde85-e2b2-44a1-913a-a6391a649db8" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/.idea/fastRequestCollection.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/config/SecurityConfig.java" afterDir="false" />
+    <list default="true" id="d70dde85-e2b2-44a1-913a-a6391a649db8" name="Changes" comment="用户认证">
+      <change afterPath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/config/SecurityConfigTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/service/MyUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/SecurityDemo1Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/SecurityDemo1Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo1/src/main/java/com/futurebytedance/securitydemo1/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-demo1/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo1/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +88,9 @@
       <workItem from="1672242869145" duration="581000" />
       <workItem from="1672243565259" duration="32000" />
       <workItem from="1672243693623" duration="2050000" />
-      <workItem from="1672327349267" duration="8035000" />
+      <workItem from="1672327349267" duration="8737000" />
+      <workItem from="1672565623149" duration="33000" />
+      <workItem from="1672565693377" duration="1400000" />
     </task>
     <task id="LOCAL-00001" summary="git ignore">
       <created>1672244270941</created>
@@ -103,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672244851731</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="用户认证">
+      <created>1672336049309</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672336049309</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +134,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="git ignore" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="用户认证" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户认证" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
