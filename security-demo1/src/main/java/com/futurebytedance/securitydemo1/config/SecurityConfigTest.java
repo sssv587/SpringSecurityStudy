@@ -28,6 +28,9 @@ public class SecurityConfigTest extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        //配置没有权限访问跳转自定义页面
+        http.exceptionHandling().accessDeniedPage("/unauth.html");
+
         http.formLogin() //自定义自己编写的登录页面
                 .loginPage("/login.html") //登录页面设置
                 .loginProcessingUrl("/user/login") //登录访问路径
@@ -40,9 +43,9 @@ public class SecurityConfigTest extends WebSecurityConfigurerAdapter {
                 //2.hasAnyAuthority方法
                 //.antMatchers("/test/index").hasAnyAuthority("admins,manager")
                 //3.hasRole方法
-                //.antMatchers("/test/index").hasRole("sale")
+                .antMatchers("/test/index").hasRole("sale")
                 //4.hasAnyRole方法
-                .antMatchers("/test/index").hasAnyRole("sale,admin")
+                //.antMatchers("/test/index").hasAnyRole("sale,admin")
                 .anyRequest().authenticated()
                 .and().csrf().disable(); //关闭csrf防护
     }
