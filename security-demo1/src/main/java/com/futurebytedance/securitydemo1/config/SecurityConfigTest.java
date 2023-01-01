@@ -35,10 +35,14 @@ public class SecurityConfigTest extends WebSecurityConfigurerAdapter {
                 .and().authorizeRequests()
                 .antMatchers("/", "/test/hello", "/user/login").permitAll() //设置哪些路径可以直接访问,不需要认证
                 //当前登录用户，只有具有admins权限才可以访问这个路径
-                //hasAuthority方法
+                //1.hasAuthority方法
                 //.antMatchers("/test/index").hasAuthority("admins")
-                //hasAnyAuthority方法
-                .antMatchers("/test/index").hasAnyAuthority("admins,manager")
+                //2.hasAnyAuthority方法
+                //.antMatchers("/test/index").hasAnyAuthority("admins,manager")
+                //3.hasRole方法
+                //.antMatchers("/test/index").hasRole("sale")
+                //4.hasAnyRole方法
+                .antMatchers("/test/index").hasAnyRole("sale,admin")
                 .anyRequest().authenticated()
                 .and().csrf().disable(); //关闭csrf防护
     }
