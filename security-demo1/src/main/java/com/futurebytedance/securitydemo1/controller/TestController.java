@@ -31,7 +31,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     //默认用户名:user 密码会自动生成在控制台
     @GetMapping("hello")
-    public String add() {
+    public String hello() {
         return "hello security";
+    }
+
+    @GetMapping("index")
+    public String index() {
+        return "hello index";
     }
 }
