@@ -5,3 +5,7 @@
 /.idea/compiler.xml
 /security-demo1/security-demo1.iml
 /security-demo1/HELP.md
+/security-csrf/.mvn/*
+/security-csrf/target/*
+/security-csrf/HELP.md
+/security-csrf/security-csrf.iml
