@@ -1,7 +1,9 @@
 package com.futurebytedance.securitydemo1.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author yuhang.sun
@@ -11,6 +13,8 @@ import lombok.Data;
  */
 @Data
 @TableName("user")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Users {
     private Integer id;
     private String username;
