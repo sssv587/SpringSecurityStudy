@@ -3,8 +3,16 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringSecurityStudy.iml" filepath="$PROJECT_DIR$/SpringSecurityStudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/acl-parent/acl-parent.iml" filepath="$PROJECT_DIR$/acl-parent/acl-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/acl-parent/infrastructure/api_gateway/api_gateway.iml" filepath="$PROJECT_DIR$/acl-parent/infrastructure/api_gateway/api_gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/acl-parent/common/common.iml" filepath="$PROJECT_DIR$/acl-parent/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/acl-parent/infrastructure/infrastructure.iml" filepath="$PROJECT_DIR$/acl-parent/infrastructure/infrastructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/security-csrf/security-csrf.iml" filepath="$PROJECT_DIR$/security-csrf/security-csrf.iml" />
       <module fileurl="file://$PROJECT_DIR$/security-demo1/security-demo1.iml" filepath="$PROJECT_DIR$/security-demo1/security-demo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/acl-parent/service/service.iml" filepath="$PROJECT_DIR$/acl-parent/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/acl-parent/service/service_acl/service_acl.iml" filepath="$PROJECT_DIR$/acl-parent/service/service_acl/service_acl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/acl-parent/common/service_base/service_base.iml" filepath="$PROJECT_DIR$/acl-parent/common/service_base/service_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/acl-parent/common/spring_security/spring_security.iml" filepath="$PROJECT_DIR$/acl-parent/common/spring_security/spring_security.iml" />
     </modules>
   </component>
 </project>

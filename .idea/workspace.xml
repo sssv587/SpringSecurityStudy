@@ -4,22 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d70dde85-e2b2-44a1-913a-a6391a649db8" name="Changes" comment="笔记图片">
-      <change afterPath="$PROJECT_DIR$/security-csrf/security-csrf.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-csrf/src/main/java/com/futurebytedance/securitycsrf/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-csrf/src/main/java/com/futurebytedance/securitycsrf/controller/CSRFController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-csrf/src/main/java/com/futurebytedance/securitycsrf/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-csrf/src/main/java/com/futurebytedance/securitycsrf/service/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-csrf/src/main/resources/templates/csrf/csrfTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-csrf/src/main/resources/templates/csrf/csrf_token.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-csrf/src/main/resources/templates/login/login.html" afterDir="false" />
+    <list default="true" id="d70dde85-e2b2-44a1-913a-a6391a649db8" name="Changes" comment="微服务权限项目-搭建项目工程">
+      <change afterPath="$PROJECT_DIR$/acl-parent/acl-parent.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/common/common.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/common/service_base/service_base.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/common/spring_security/spring_security.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/infrastructure/api_gateway/api_gateway.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/infrastructure/infrastructure.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/service_acl.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-demo1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acl-parent/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acl-parent/common/service_base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/common/service_base/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acl-parent/infrastructure/api_gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/infrastructure/api_gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acl-parent/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/acl-parent/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-csrf/security-csrf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/security-csrf/security-csrf.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +82,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/security-csrf/src/main/resources" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/acl-parent" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2796875" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -87,8 +95,26 @@
       <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\security-demo1\src\main\resources\static" />
       <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\Note\image" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\guli-parent\acl_parent\service" />
+      <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\guli-parent\acl_parent\common" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SecurityCsrfApplication">
+    <configuration name="AclParentApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="acl-parent" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.futurebytedance.aclparent.AclParentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AclParentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="acl_parent" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.futurebytedance.acl_parent.AclParentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SecurityCsrfApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="security-csrf" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.futurebytedance.securitycsrf.SecurityCsrfApplication" />
@@ -118,7 +144,8 @@
       <workItem from="1672327349267" duration="8737000" />
       <workItem from="1672565623149" duration="33000" />
       <workItem from="1672565693377" duration="6850000" />
-      <workItem from="1672648041120" duration="6927000" />
+      <workItem from="1672648041120" duration="13082000" />
+      <workItem from="1672675595196" duration="1744000" />
     </task>
     <task id="LOCAL-00001" summary="git ignore">
       <created>1672244270941</created>
@@ -218,7 +245,28 @@
       <option name="project" value="LOCAL" />
       <updated>1672655319293</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="CSRF功能">
+      <created>1672656933724</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1672656933724</updated>
+    </task>
+    <task id="LOCAL-00016" summary="config">
+      <created>1672657006464</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1672657006464</updated>
+    </task>
+    <task id="LOCAL-00017" summary="微服务权限项目-搭建项目工程">
+      <created>1672674549431</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1672674549432</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +299,10 @@
     <MESSAGE value="用户授权-用户注销" />
     <MESSAGE value="用户授权-自动登录实现" />
     <MESSAGE value="笔记图片" />
-    <option name="LAST_COMMIT_MESSAGE" value="笔记图片" />
+    <MESSAGE value="CSRF功能" />
+    <MESSAGE value="config" />
+    <MESSAGE value="微服务权限项目-搭建项目工程" />
+    <option name="LAST_COMMIT_MESSAGE" value="微服务权限项目-搭建项目工程" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
