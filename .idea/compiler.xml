@@ -8,14 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="security-demo1" />
+        <module name="security-csrf" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="security-csrf" target="1.8" />
       <module name="security-demo1" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="security-csrf" options="-parameters" />
       <module name="security-demo1" options="-parameters" />
     </option>
   </component>

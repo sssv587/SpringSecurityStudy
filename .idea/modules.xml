@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringSecurityStudy.iml" filepath="$PROJECT_DIR$/SpringSecurityStudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/security-csrf/security-csrf.iml" filepath="$PROJECT_DIR$/security-csrf/security-csrf.iml" />
       <module fileurl="file://$PROJECT_DIR$/security-demo1/security-demo1.iml" filepath="$PROJECT_DIR$/security-demo1/security-demo1.iml" />
     </modules>
   </component>
