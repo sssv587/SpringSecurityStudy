@@ -25,7 +25,7 @@ import java.util.ArrayList;
  * @author yuhang.sun
  * @version 1.0
  * @date 2023/1/3 - 23:51
- * @Description
+ * @Description security认证过滤器
  */
 public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
     private TokenManager tokenManager;
