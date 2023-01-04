@@ -1,6 +1,6 @@
 package com.futurebytedance.utils.exceptionhandler;
 
-import com.atguigu.utils.utils.R;
+import com.futurebytedance.utils.utils.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
