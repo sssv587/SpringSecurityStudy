@@ -7,11 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="api_gateway" />
         <module name="service_acl" />
         <module name="spring_security" />
         <module name="service_base" />
         <module name="security-demo1" />
+        <module name="api_gateway" />
         <module name="security-csrf" />
       </profile>
     </annotationProcessing>
@@ -28,6 +28,7 @@
       <module name="service_acl" target="8" />
       <module name="service_base" target="8" />
       <module name="spring_security" target="8" />
+      <module name="test" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

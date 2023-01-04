@@ -4,27 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d70dde85-e2b2-44a1-913a-a6391a649db8" name="Changes" comment="微服务权限项目-搭建项目工程">
-      <change afterPath="$PROJECT_DIR$/acl-parent/acl-parent.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/acl-parent/common/common.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/acl-parent/common/service_base/service_base.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/acl-parent/common/spring_security/spring_security.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/acl-parent/infrastructure/api_gateway/api_gateway.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/acl-parent/infrastructure/infrastructure.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/acl-parent/service/service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/service_acl.iml" afterDir="false" />
+    <list default="true" id="d70dde85-e2b2-44a1-913a-a6391a649db8" name="Changes" comment="微服务权限案例-编写核心配置类">
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/ServiceAclApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/controller/PermissionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/controller/RoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/entity/Permission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/entity/RolePermission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/entity/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/helper/MemuHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/helper/PermissionHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/mapper/PermissionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/mapper/RoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/mapper/RolePermissionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/mapper/UserRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/mapper/xml/PermissionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/mapper/xml/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/mapper/xml/RolePermissionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/mapper/xml/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/mapper/xml/UserRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/service/IndexService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/service/PermissionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/service/RolePermissionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/service/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/service/UserRoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/service/impl/IndexServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/service/impl/PermissionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/service/impl/RolePermissionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/service/impl/UserRoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/java/com/futurebytedance/aclservice/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acl-parent/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acl-parent/common/service_base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/common/service_base/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acl-parent/infrastructure/api_gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/infrastructure/api_gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acl-parent/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/acl-parent/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-csrf/security-csrf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/security-csrf/security-csrf.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acl-parent/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/common/common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acl-parent/common/service_base/service_base.iml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/common/service_base/service_base.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acl-parent/common/service_base/src/main/java/com/futurebytedance/utils/exceptionhandler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/common/service_base/src/main/java/com/futurebytedance/utils/exceptionhandler/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acl-parent/common/spring_security/spring_security.iml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/common/spring_security/spring_security.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acl-parent/common/spring_security/src/main/java/com/futurebytedance/security/config/TokenWebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/common/spring_security/src/main/java/com/futurebytedance/security/config/TokenWebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acl-parent/infrastructure/api_gateway/api_gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/infrastructure/api_gateway/api_gateway.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acl-parent/infrastructure/infrastructure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/infrastructure/infrastructure.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acl-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acl-parent/service/service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/service/service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acl-parent/service/service_acl/service_acl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/acl-parent/service/service_acl/service_acl.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +68,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -82,7 +113,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/acl-parent" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/acl-parent/service/service_acl/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2796875" />
@@ -90,17 +121,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\acl-parent\service\service_acl\src\main\resources" />
+      <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\acl-parent\service\service_acl\src\main\java\com\futurebytedance\aclservice" />
+      <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\acl-parent\common\spring_security\src\main\java\com\futurebytedance\security\entity" />
+      <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\acl-parent\common\service_base\src\main\java\com\futurebytedance\utils" />
       <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\security-csrf\src\main\resources" />
-      <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\security-csrf\src\main\java\com\futurebytedance\securitycsrf" />
-      <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\security-demo1\src\main\resources\static" />
-      <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\Note\image" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\guli-parent\acl_parent\service" />
       <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\guli-parent\acl_parent\common" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SecurityCsrfApplication">
+  <component name="RunManager" selected="Spring Boot.ServiceAclApplication">
     <configuration name="AclParentApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="acl-parent" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.futurebytedance.aclparent.AclParentApplication" />
@@ -129,6 +161,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServiceAclApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="service_acl" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.futurebytedance.aclservice.ServiceAclApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -145,7 +184,9 @@
       <workItem from="1672565623149" duration="33000" />
       <workItem from="1672565693377" duration="6850000" />
       <workItem from="1672648041120" duration="13082000" />
-      <workItem from="1672675595196" duration="1744000" />
+      <workItem from="1672675595196" duration="2387000" />
+      <workItem from="1672757674813" duration="5454000" />
+      <workItem from="1672845079154" duration="3331000" />
     </task>
     <task id="LOCAL-00001" summary="git ignore">
       <created>1672244270941</created>
@@ -266,7 +307,56 @@
       <option name="project" value="LOCAL" />
       <updated>1672674549432</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="微服务权限项目-引入项目依赖">
+      <created>1672677473643</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1672677473643</updated>
+    </task>
+    <task id="LOCAL-00019" summary="微服务权限项目-service_base工具类">
+      <created>1672758241143</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1672758241143</updated>
+    </task>
+    <task id="LOCAL-00020" summary="微服务权限项目-security工具类">
+      <created>1672759988886</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1672759988886</updated>
+    </task>
+    <task id="LOCAL-00021" summary="微服务权限项目-security认证过滤器">
+      <created>1672762240633</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1672762240633</updated>
+    </task>
+    <task id="LOCAL-00022" summary="微服务权限项目-security授权过滤器">
+      <created>1672763252200</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1672763252200</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add iml">
+      <created>1672763315641</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1672763315641</updated>
+    </task>
+    <task id="LOCAL-00024" summary="微服务权限案例-编写核心配置类">
+      <created>1672845758665</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1672845758665</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +392,14 @@
     <MESSAGE value="CSRF功能" />
     <MESSAGE value="config" />
     <MESSAGE value="微服务权限项目-搭建项目工程" />
-    <option name="LAST_COMMIT_MESSAGE" value="微服务权限项目-搭建项目工程" />
+    <MESSAGE value="微服务权限项目-引入项目依赖" />
+    <MESSAGE value="微服务权限项目-service_base工具类" />
+    <MESSAGE value="微服务权限项目-security工具类" />
+    <MESSAGE value="微服务权限项目-security认证过滤器" />
+    <MESSAGE value="微服务权限项目-security授权过滤器" />
+    <MESSAGE value="add iml" />
+    <MESSAGE value="微服务权限案例-编写核心配置类" />
+    <option name="LAST_COMMIT_MESSAGE" value="微服务权限案例-编写核心配置类" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

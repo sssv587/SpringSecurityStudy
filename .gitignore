@@ -10,3 +10,6 @@
 /security-csrf/HELP.md
 /security-csrf/security-csrf.iml
 /acl-parent/.mvn/*
+/acl-parent/common/spring_security/target/*
+/acl-parent/common/service_base/target/*
+/acl-parent/service/service_acl/target/*

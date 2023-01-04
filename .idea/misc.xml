@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/security-csrf/pom.xml" />
         <option value="$PROJECT_DIR$/guli-parent/acl_parent/pom.xml" />
         <option value="$PROJECT_DIR$/acl-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/acl-parent/service/pom.xml" />
       </list>
     </option>
   </component>
