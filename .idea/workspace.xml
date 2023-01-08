@@ -4,107 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d70dde85-e2b2-44a1-913a-a6391a649db8" name="Changes" comment="微服务权限案例-整合网关">
-      <change afterPath="$PROJECT_DIR$/Note/image/image-20230108234349644.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/image-20230108234425269.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/image-20230108234455208.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/image-20230108234531053.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/image-20230108234557778.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/image-20230108234650080.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/image-20230108234715115.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/image-20230108234749134.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/image-20230108234812464.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/image-20230108234845972.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/image-20230108234917966.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps100.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps101.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps102.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps104.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps105.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps116.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps118.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps120.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps121.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps124.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps131.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps144.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps148.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps152.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps153.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps168.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps170.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps184.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps185.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps187.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps190.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps199.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps201.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps202.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps204.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps207.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps215.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps227.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps235.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps250.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps252.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps253.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps254.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps255.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps256.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps257.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps259.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps260.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps261.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps263.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps265.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps267.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps268.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps269.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps270.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps272.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps274.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps275.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps277.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps279.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps280.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps281.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps283.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps285.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps287.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps288.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps289.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps290.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps292.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps294.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps295.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps30.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps33.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps35.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps36.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps38.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps42.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps44.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps74.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps83.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps84.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps89.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps92.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps94.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps96.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps97.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Note/image/wps98.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d70dde85-e2b2-44a1-913a-a6391a649db8" name="Changes" comment="Note" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,7 +61,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Note/image" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Note" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2796875" />
@@ -169,11 +69,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\Note" />
+      <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\Note\image" />
       <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\acl-parent\infrastructure\api_gateway\src\main\resources" />
       <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\acl-parent\service\service_acl\src\main\resources" />
       <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\acl-parent\service\service_acl\src\main\java\com\futurebytedance\aclservice" />
-      <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\acl-parent\common\spring_security\src\main\java\com\futurebytedance\security\entity" />
-      <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\acl-parent\common\service_base\src\main\java\com\futurebytedance\utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\10926\IdeaProjects\SpringSecurityStudy\guli-parent\acl_parent\service" />
@@ -255,7 +155,7 @@
       <workItem from="1672845079154" duration="5357000" />
       <workItem from="1672931996449" duration="2894000" />
       <workItem from="1673185496398" duration="142000" />
-      <workItem from="1673185678285" duration="1849000" />
+      <workItem from="1673185678285" duration="1963000" />
     </task>
     <task id="LOCAL-00001" summary="git ignore">
       <created>1672244270941</created>
@@ -453,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672849365794</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Note">
+      <created>1673193080157</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1673193080157</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +379,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="用户认证(设置用户名和密码)" />
     <MESSAGE value="用户认证(查询数据库完成认证)" />
     <MESSAGE value="配置" />
     <MESSAGE value="用户认证(自定义用户登录页面)" />
@@ -497,7 +403,8 @@
     <MESSAGE value="pom" />
     <MESSAGE value="微服务权限案例-整合权限管理模块" />
     <MESSAGE value="微服务权限案例-整合网关" />
-    <option name="LAST_COMMIT_MESSAGE" value="微服务权限案例-整合网关" />
+    <MESSAGE value="Note" />
+    <option name="LAST_COMMIT_MESSAGE" value="Note" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

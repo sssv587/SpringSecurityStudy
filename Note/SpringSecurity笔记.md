@@ -6,7 +6,7 @@ Spring 是非常流行和成功的 Java 应用开发框架，Spring Security 正
 
 正如你可能知道的关于安全方面的两个主要区域是“**认证**”和“**授权**”（或者访问控制），一般来说，Web 应用的安全性包括**用户认证（Authentication）和用户授权（Authorization）**两个部分，这两点也是 Spring Security 重要核心功能。
 
- （1） 用户认证指的是：验证某个用户是否为系统中的合法主体，也就是说用户能否访问该系统。用户认证一般要求用户提供用户名和密码。系统通过校验用户名和密码来完成认证过程。**通俗点说就是系统认为用户是否能登录**
+（1） 用户认证指的是：验证某个用户是否为系统中的合法主体，也就是说用户能否访问该系统。用户认证一般要求用户提供用户名和密码。系统通过校验用户名和密码来完成认证过程。**通俗点说就是系统认为用户是否能登录**
 
 （2） 用户授权指的是验证某个用户是否有权限执行某个操作。在一个系统中，不同用户所具有的权限是不同的。比如对一个文件来说，有的用户只能进行读取，而有的用户可以进行修改。一般来说，系统会为不同的用户分配不同的角色，而每个角色则对应一系列的权限。**通俗点讲就是系统判断用户是否有权限去做某些事情。**
 
@@ -30,13 +30,13 @@ Acegi 安全 2007 年底正式成为了 Spring 组合项目，更名为"Spring S
 
 Spring 技术栈的组成部分。
 
-![img](image/wps6.jpg) 
+![img](image/image-20230108235750572.png)
 
 通过提供完整可扩展的认证和授权支持保护你的应用程序。
 
 https://spring.io/projects/spring-security
 
- 
+
 
 SpringSecurity 特点：
 
@@ -52,7 +52,7 @@ SpringSecurity 特点：
 
 Apache 旗下的轻量级权限控制框架。
 
-![img](image/wps8.jpg) 
+![img](image/wps8.jpg)
 
 特点：
 
@@ -62,7 +62,7 @@ Apache 旗下的轻量级权限控制框架。
   - 好处：不局限于Web 环境，可以脱离Web 环境使用
   - 缺陷：在Web 环境下一些特定的需求需要手动编写代码定制
 
- 
+
 
 Spring Security 是 Spring 家族中的一个安全管理框架，实际上，在 Spring Boot 出现之前，Spring Security 就已经发展了多年了，但是使用的并不多，安全管理这个领域，一直是 Shiro 的天下。
 
@@ -76,7 +76,7 @@ Spring Security 是 Spring 家族中的一个安全管理框架，实际上，�
 
 - Spring Boot/Spring Cloud + Spring Security
 
-**以上只是一个推荐的组合而已，如果单纯从技术上来说，无论怎么组合，都是可以运行的。** 
+**以上只是一个推荐的组合而已，如果单纯从技术上来说，无论怎么组合，都是可以运行的。**
 
 ## **1.4** 模块划分
 
@@ -88,33 +88,33 @@ Spring Security 是 Spring 家族中的一个安全管理框架，实际上，�
 
 ![img](image/wps15.jpg)
 
-  
 
-![img](image/wps17.jpg) 
 
- 
+![img](image/wps17.jpg)
+
+
 
 ![img](image/wps18.jpg)
 
- 
 
-![img](image/wps19.jpg) 
 
- 
+![img](image/wps19.jpg)
+
+
 
 添加一个配置类：
 
 ```java
 @Configuration
 public class SecurityConfigextends WebSecurityConfigurerAdapter {
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-           http.formLogin() // 表单登录
+  @Override
+  protected void configure(HttpSecurity http) throws Exception {
+    http.formLogin() // 表单登录
             .and()
             .authorizeRequests() // 认证配置
             .anyRequest() // 任何请求
             .authenticated(); // 都需要身份验证
-   }
+  }
 }
 ```
 
@@ -122,9 +122,9 @@ public class SecurityConfigextends WebSecurityConfigurerAdapter {
 
 访问 localhost:8080
 
-![img](image/wps23.png) 
+![img](image/wps23.png)
 
- 
+
 
 默认的用户名：user
 
@@ -136,7 +136,7 @@ public class SecurityConfigextends WebSecurityConfigurerAdapter {
 
 输入用户名，密码，这样表示可以访问了，404 表示我们没有这个控制器，但是我们可以访问了。
 
- ![img](image/wps26.png)
+![img](image/wps26.png)
 
 ## **2.3** 权限管理中的相关概念
 
@@ -165,22 +165,22 @@ public class SecurityConfigextends WebSecurityConfigurerAdapter {
 ## **2.4** 添加一个控制器进行访问
 
  ```java
- package com.atguigu.controller;
- @Controller
- public class IndexController {
-       @GetMapping("index")
-       @ResponseBody
-       public String index(){
-         return "success";
-      }
- }
+package com.atguigu.controller;
+@Controller
+public class IndexController {
+      @GetMapping("index")
+      @ResponseBody
+      public String index(){
+        return "success";
+     }
+}
  ```
 
 ![img](image/wps30.jpg)
 
 ## **2.5** **SpringSecurity**基本原理
 
-SpringSecurity 本质是一个过滤器链： 
+SpringSecurity 本质是一个过滤器链：
 
 从启动是可以获取到过滤器链：
 
@@ -207,31 +207,31 @@ org.springframework.security.web.access.intercept.FilterSecurityInterceptor
 
 FilterSecurityInterceptor：是一个方法级的权限过滤器, 基本位于过滤链的最底部。
 
-![img](image/wps33.png) 
+![img](image/wps33.png)
 
 super.beforeInvocation(fi) 表示查看之前的 filter 是否通过。
 
 fi.getChain().doFilter(fi.getRequest(), fi.getResponse());表示真正的调用后台的服务。
 
- 
+
 
 ExceptionTranslationFilter：是个异常过滤器，用来处理在认证授权过程中抛出的异常
 
 ![img](image/wps35.png)
 
- 
+
 
 UsernamePasswordAuthenticationFilter ：对/login 的 POST 请求做拦截，校验表单中用户名，密码。
 
-![img](image/wps36.png) 
+![img](image/wps36.png)
 
- 
+
 
 ## **2.6** **UserDetailsService**接口讲解
 
 当什么也没有配置的时候，账号和密码是由 Spring Security 定义生成的。而在实际项目中账号和密码都是从数据库中查询出来的。 所以我们要通过自定义逻辑控制认证逻辑。
 
- 
+
 
 如果需要自定义逻辑时，只需要实现 UserDetailsService 接口即可。接口定义如下：
 
@@ -239,7 +239,7 @@ UsernamePasswordAuthenticationFilter ：对/login 的 POST 请求做拦截，校
 
 
 
-- **返回值UserDetails**  
+- **返回值UserDetails**
 
 这个类是系统默认的用户“**主体**”
 
@@ -264,42 +264,42 @@ boolean isEnabled();
 
 ![img](image/wps42.png)
 
-以后我们只需要使用 User 这个实体类即可！![img](file:///C:\Users\10926\AppData\Local\Temp\ksohtml11644\wps43.png) 
+以后我们只需要使用 User 这个实体类即可！![img](file:///C:\Users\10926\AppData\Local\Temp\ksohtml11644\wps43.png)
 
-![img](image/wps44.jpg) 
+![img](image/wps44.jpg)
 
- 
+
 
 - **方法参数 username**
 
 表示用户名。此值是客户端表单传递过来的数据。默认情况下必须叫 username，否则无法接收。
 
- 
+
 
 ## **2.7** PasswordEncoder接口讲解
 
  ```java
- // 表示把参数按照特定的解析规则进行解析
- String encode(CharSequence rawPassword);
- // 表示验证从存储中获取的编码密码与编码后提交的原始密码是否匹配。如果密码匹配，则返回 true；如果不匹配，则返回 false。第一个参数表示需要被解析的密码。第二个参数表示存储的密码。
- boolean matches(CharSequence rawPassword, String encodedPassword);
- // 表示如果解析的密码能够再次进行解析且达到更安全的结果则返回 true，否则返回false。默认返回 false。
- default boolean upgradeEncoding(String encodedPassword) {
- 	return false;
- }
+// 表示把参数按照特定的解析规则进行解析
+String encode(CharSequence rawPassword);
+// 表示验证从存储中获取的编码密码与编码后提交的原始密码是否匹配。如果密码匹配，则返回 true；如果不匹配，则返回 false。第一个参数表示需要被解析的密码。第二个参数表示存储的密码。
+boolean matches(CharSequence rawPassword, String encodedPassword);
+// 表示如果解析的密码能够再次进行解析且达到更安全的结果则返回 true，否则返回false。默认返回 false。
+default boolean upgradeEncoding(String encodedPassword) {
+	return false;
+}
  ```
 
 
 
 接口实现类
 
-![img](image/wps50.png) 
+![img](image/wps50.png)
 
 BCryptPasswordEncoder 是 Spring Security 官方推荐的密码解析器，平时多使用这个解析器。
 
 BCryptPasswordEncoder 是对bcrypt 强散列方法的具体实现。是基于 Hash 算法实现的单向加密。可以通过 strength 控制加密强度，默认 10.
 
- 
+
 
 - 查用方法演示
 
@@ -321,7 +321,7 @@ public void test01(){
 
 ## **2.8** **SpringBoot**对Security的自动配置
 
- [https://docs.spring.io/spring-](https://docs.spring.io/spring-security/site/docs/5.3.4.RELEASE/reference/html5/#servlet-hello) [security/site/docs/5.3.4.RELEASE/reference/html5/#servlet-hello](https://docs.spring.io/spring-security/site/docs/5.3.4.RELEASE/reference/html5/#servlet-hello)
+[https://docs.spring.io/spring-](https://docs.spring.io/spring-security/site/docs/5.3.4.RELEASE/reference/html5/#servlet-hello) [security/site/docs/5.3.4.RELEASE/reference/html5/#servlet-hello](https://docs.spring.io/spring-security/site/docs/5.3.4.RELEASE/reference/html5/#servlet-hello)
 
 ![image-20230108234349644](image/image-20230108234349644.png)
 
@@ -334,38 +334,38 @@ public void test01(){
 ### 3.1.1 方式一：在application.properties
 
  ```properties
- spring.security.user.name=atguigu
- spring.security.user.password=atguigu
+spring.security.user.name=atguigu
+spring.security.user.password=atguigu
  ```
 
 ### 3.1.2 方式二：编写类实现接口
 
  ```java
- package com.atguigu.config;
- @Configuration
- public class SecurityConfig {
- 	// 注入 PasswordEncoder 类到 spring 容器中
-     @Bean
-     public PasswordEncoder passwordEncoder(){
-         return new BCryptPasswordEncoder();
-     }
- }
- 
- package com.atguigu.service;
- @Service
- public class LoginService implements UserDetailsService {
-     @Override
-     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-     // 判断用户名是否存在
-     if (!"admin".equals(username)){
-     	throw new UsernameNotFoundException("用户名不存在！");
-     }
-     // 从数据库中获取的密码 atguigu 的密文
-     String pwd = "$2a$10$2R/M6iU3mCZt3ByG7kwYTeeW0w7/UqdeXrb27zkBIizBvAven0/na";
-     // 第三个参数表示权限
-     return new User(username,pwd,AuthorityUtils.commaSeparatedStringToAuthorityList("admin,"));
-     }
- }
+package com.atguigu.config;
+@Configuration
+public class SecurityConfig {
+	// 注入 PasswordEncoder 类到 spring 容器中
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+}
+
+package com.atguigu.service;
+@Service
+public class LoginService implements UserDetailsService {
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    // 判断用户名是否存在
+    if (!"admin".equals(username)){
+    	throw new UsernameNotFoundException("用户名不存在！");
+    }
+    // 从数据库中获取的密码 atguigu 的密文
+    String pwd = "$2a$10$2R/M6iU3mCZt3ByG7kwYTeeW0w7/UqdeXrb27zkBIizBvAven0/na";
+    // 第三个参数表示权限
+    return new User(username,pwd,AuthorityUtils.commaSeparatedStringToAuthorityList("admin,"));
+    }
+}
  ```
 
 ## **3.2** 实现数据库认证来完成用户登录
@@ -375,50 +375,50 @@ public void test01(){
 ### **3.2.1** 准备sql
 
  ```sql
- create table users(
-     id bigint primary key auto_increment,
-     username varchar(20) unique not null,
-     password varchar(100)
- );
- 
- -- 密码 atguigu
- insert into users values(1,'张san','$2a$10$2R/M6iU3mCZt3ByG7kwYTeeW0w7/UqdeXrb27zkBIizBvAven0/na');
- -- 密码 atguigu
- insert into users values(2,'李
- si','$2a$10$2R/M6iU3mCZt3ByG7kwYTeeW0w7/UqdeXrb27zkBIizBvAven0/na');
- 
- create table role(
-     id bigint primary key auto_increment,
-     name varchar(20)
- );
- 
- insert into role values(1,'管理员');
- insert into role values(2,'普通用户');
- 
- create table role_user(
-     uid bigint,
-     rid bigint
- );
- insert into role_user values(1,1);
- insert into role_user values(2,2);
- 
- create table menu(
-     id bigint primary key auto_increment,
-     name varchar(20),
-     url varchar(100),
-     parentid bigint,
-     permission varchar(20)
- );
- insert into menu values(1,'系统管理','',0,'menu:system');
- insert into menu values(2,'用户管理','',0,'menu:user');
- 
- create table role_menu(
-     mid bigint,
-     rid bigint
- );
- insert into role_menu values(1,1);
- insert into role_menu values(2,1);
- insert into role_menu values(2,2);
+create table users(
+    id bigint primary key auto_increment,
+    username varchar(20) unique not null,
+    password varchar(100)
+);
+
+-- 密码 atguigu
+insert into users values(1,'张san','$2a$10$2R/M6iU3mCZt3ByG7kwYTeeW0w7/UqdeXrb27zkBIizBvAven0/na');
+-- 密码 atguigu
+insert into users values(2,'李
+si','$2a$10$2R/M6iU3mCZt3ByG7kwYTeeW0w7/UqdeXrb27zkBIizBvAven0/na');
+
+create table role(
+    id bigint primary key auto_increment,
+    name varchar(20)
+);
+
+insert into role values(1,'管理员');
+insert into role values(2,'普通用户');
+
+create table role_user(
+    uid bigint,
+    rid bigint
+);
+insert into role_user values(1,1);
+insert into role_user values(2,2);
+
+create table menu(
+    id bigint primary key auto_increment,
+    name varchar(20),
+    url varchar(100),
+    parentid bigint,
+    permission varchar(20)
+);
+insert into menu values(1,'系统管理','',0,'menu:system');
+insert into menu values(2,'用户管理','',0,'menu:user');
+
+create table role_menu(
+    mid bigint,
+    rid bigint
+);
+insert into role_menu values(1,1);
+insert into role_menu values(2,1);
+insert into role_menu values(2,2);
  ```
 
 ### **3.2.2** 添加依赖
@@ -471,8 +471,8 @@ public class Users {
 ### **3.2.4** 整合MybatisPlus制作mapper
 
  ```java
- @Repository
- public interface UsersMapper extends BaseMapper<Users> {}
+@Repository
+public interface UsersMapper extends BaseMapper<Users> {}
  ```
 
 ```properties
@@ -515,7 +515,7 @@ public class MyUserDetailsService implements UserDetailsService {
 
 输入用户名，密码
 
- 
+
 
 ## **3.3** 未认证请求跳转到登录页
 
@@ -579,42 +579,42 @@ protected void configure(HttpSecurity http) throws Exception {
 
 访问 localhost:8090/findAll 会提示 403 错误 表示没有这个权限。
 
-![img](image/wps84.png) 
+![img](image/wps84.png)
 
- 
 
- 
+
+
 
 ### **3.3.6** 设置未授权的请求跳转到登录页
 
  ```java
- //配置类
- @Override
- protected void configure(HttpSecurity http) throws Exception {
-     // 配置认证
-     http.formLogin()
-      .loginPage("/index") // 配置哪个 url 为登录页面
-      .loginProcessingUrl("/login") // 设置哪个是登录的 url。
-      .successForwardUrl("/success") // 登录成功之后跳转到哪个 url
-      .failureForwardUrl("/fail");// 登录失败之后跳转到哪个 url
-     http.authorizeRequests()
-      .antMatchers("/layui/**","/index") //表示配置请求路径
-      .permitAll() // 指定 URL 无需保护。
-      .anyRequest() // 其他请求
-      .authenticated(); //需要认证
-     // 关闭 csrf
-     http.csrf().disable();
- }
- 
- //控制器
- @PostMapping("/success")
- public String success(){
-     return "success";
- }
- @PostMapping("/fail")
- public String fail(){
-     return "fail";
- }
+//配置类
+@Override
+protected void configure(HttpSecurity http) throws Exception {
+    // 配置认证
+    http.formLogin()
+     .loginPage("/index") // 配置哪个 url 为登录页面
+     .loginProcessingUrl("/login") // 设置哪个是登录的 url。
+     .successForwardUrl("/success") // 登录成功之后跳转到哪个 url
+     .failureForwardUrl("/fail");// 登录失败之后跳转到哪个 url
+    http.authorizeRequests()
+     .antMatchers("/layui/**","/index") //表示配置请求路径
+     .permitAll() // 指定 URL 无需保护。
+     .anyRequest() // 其他请求
+     .authenticated(); //需要认证
+    // 关闭 csrf
+    http.csrf().disable();
+}
+
+//控制器
+@PostMapping("/success")
+public String success(){
+    return "success";
+}
+@PostMapping("/fail")
+public String fail(){
+    return "fail";
+}
  ```
 
 ```html
@@ -644,17 +644,17 @@ protected void configure(HttpSecurity http) throws Exception {
 ```
 
  ```java
- @Override
- protected void configure(HttpSecurity htpp) throw Exception{
-     //配置认证
-     http.formLogin()
-         	.loginPage("/index") //配置哪个url为登录页面
-         	.loginProcessingUrl("/login") //设置哪个是登录的url
-         	.successForwardUrl("/success") //登陆成功之后跳转到哪个url
-         	.failureForwardUrl("/fail") //登录失败周跳转到哪个url
-         	.usernameParameter("loginAcct") //获取登录用户名
-         	.passwordParameter("/userPswd") //获取登录密码
- }
+@Override
+protected void configure(HttpSecurity htpp) throw Exception{
+    //配置认证
+    http.formLogin()
+        	.loginPage("/index") //配置哪个url为登录页面
+        	.loginProcessingUrl("/login") //设置哪个是登录的url
+        	.successForwardUrl("/success") //登陆成功之后跳转到哪个url
+        	.failureForwardUrl("/fail") //登录失败周跳转到哪个url
+        	.usernameParameter("loginAcct") //获取登录用户名
+        	.passwordParameter("/userPswd") //获取登录密码
+}
  ```
 
 ## **3.4** 基于角色或权限进行访问控制
@@ -671,7 +671,7 @@ protected void configure(HttpSecurity http) throws Exception {
 
 ![img](image/wps92.png)
 
- 
+
 
 - 添加一个控制器
 
@@ -695,13 +695,13 @@ http://localhost:8090/findAll
 
 ![img](image/wps96.jpg)
 
- 
+
 
 认证完成之后返回登录成功
 
 ![img](image/wps97.jpg)
 
- 
+
 
 ### **3.4.2** hasAnyAuthority方法
 
@@ -725,7 +725,7 @@ http://localhost:8090/findAll
 
 ![img](image/wps101.png)
 
- 
+
 
 修改配置文件：
 
@@ -737,11 +737,11 @@ http://localhost:8090/findAll
 
 表示用户具备任何一个条件都可以访问。给用户添加角色：
 
-![img](image/wps104.jpg) 
+![img](image/wps104.jpg)
 
 修改配置文件：
 
-![img](image/wps105.png) 
+![img](image/wps105.png)
 
 ## **3.5** 基于数据库实现权限认证
 
@@ -771,23 +771,23 @@ public class Role {
 UserInfoMapper
 
  ```java
- /**
- * 根据用户 Id 查询用户角色
- * @param userId
- * @return
- */
- List<Role> selectRoleByUserId(Long userId);
- /**
- * 根据用户 Id 查询菜单
- * @param userId
- * @return
- */
- List<Menu> selectMenuByUserId(Long userId);
+/**
+* 根据用户 Id 查询用户角色
+* @param userId
+* @return
+*/
+List<Role> selectRoleByUserId(Long userId);
+/**
+* 根据用户 Id 查询菜单
+* @param userId
+* @return
+*/
+List<Menu> selectMenuByUserId(Long userId);
  ```
 
 上述接口需要进行多表管理查询：
 
-需要在 resource/mapper 目录下自定义 UserInfoMapper.xml 
+需要在 resource/mapper 目录下自定义 UserInfoMapper.xml
 
 ```xml
 <?xml version="1.0"encoding="utf-8"?>
@@ -811,7 +811,7 @@ UserInfoMapper
 
 UsersServiceImpl
 
- ![img](image/wps116.png)
+![img](image/wps116.png)
 
 ### **3.5.3** 在配置文件中添加映射
 
@@ -841,10 +841,10 @@ mapper-locations: classpath:mapper/*.xml
 ### **3.6.2** **添加对应控制器**
 
  ```java
- @GetMapping("/unauth")
- public String accessDenyPage(){
- 	return "unauth";
- }
+@GetMapping("/unauth")
+public String accessDenyPage(){
+	return "unauth";
+}
  ```
 
 **unauth.html**
@@ -900,7 +900,7 @@ public String helloUser() {
 
 ![img](image/wps131.jpg)
 
- 
+
 
 ### **3.7.2** @PreAuthorize
 
@@ -945,7 +945,7 @@ public String preAuthorize(){
 
 ### **3.7.4** @PostFilter
 
- @PostFilter ：权限验证之后对数据进行过滤 留下用户名是 admin1 的数据
+@PostFilter ：权限验证之后对数据进行过滤 留下用户名是 admin1 的数据
 
 表达式中的 filterObject 引用的是方法返回值List 中的某一个元素
 
@@ -983,13 +983,13 @@ public List<UserInfo> getTestPreFilter(@RequestBody List<UserInfo> list){
 
 ![img](image/wps144.jpg)
 
- 
 
-![img](file:///C:\Users\10926\AppData\Local\Temp\ksohtml11644\wps145.jpg)![img](file:///C:\Users\10926\AppData\Local\Temp\ksohtml11644\wps146.jpg)![img](file:///C:\Users\10926\AppData\Local\Temp\ksohtml11644\wps147.jpg) 
 
-![img](image/wps148.jpg) 
+![img](file:///C:\Users\10926\AppData\Local\Temp\ksohtml11644\wps145.jpg)![img](file:///C:\Users\10926\AppData\Local\Temp\ksohtml11644\wps146.jpg)![img](file:///C:\Users\10926\AppData\Local\Temp\ksohtml11644\wps147.jpg)
 
- 
+![img](image/wps148.jpg)
+
+
 
 测试的 Json 数据：
 
@@ -1003,7 +1003,7 @@ public List<UserInfo> getTestPreFilter(@RequestBody List<UserInfo> list){
 
 [https://docs.spring.io/spring-](https://docs.spring.io/spring-security/site/docs/5.3.4.RELEASE/reference/html5/#el-access) [security/site/docs/5.3.4.RELEASE/reference/html5/#el-access](https://docs.spring.io/spring-security/site/docs/5.3.4.RELEASE/reference/html5/#el-access)
 
- 
+
 
 ## **3.8** 基于数据库的记住我
 
@@ -1081,9 +1081,9 @@ http.rememberMe()
 
 登录成功之后，关闭浏览器再次访问 http://localhost:8090/find，发现依然可以使用！
 
-![img](image/wps168.jpg) 
+![img](image/wps168.jpg)
 
- 
+
 
 ### **3.8.7** 设置有效期
 
@@ -1093,7 +1093,7 @@ http.rememberMe()
 
 ![img](image/wps170.jpg)
 
- 
+
 
 ## **3.9** 用户注销
 
@@ -1116,7 +1116,7 @@ http.logout().logoutUrl("/logout").logoutSuccessUrl("/index").permitAll();
 
 ### **3.9.3** **测试**
 
- 退出之后，是无法访问需要登录时才能访问的控制器！
+退出之后，是无法访问需要登录时才能访问的控制器！
 
 ## **3.10** **CSRF**
 
@@ -1124,16 +1124,16 @@ http.logout().logoutUrl("/logout").logoutSuccessUrl("/index").permitAll();
 
 **跨站请求伪造**（英语：Cross-site request forgery），也被称为 **one-click** **attack** 或者 **session riding**，通常缩写为 **CSRF** 或者 **XSRF**， 是一种挟制用户在当前已登录的 Web 应用程序上执行非本意的操作的攻击方法。跟跨网站脚本（XSS）相比，**XSS**利用的是用户对指定网站的信任，CSRF 利用的是网站对用户网页浏览器的信任。
 
- 跨站请求攻击，简单地说，是攻击者通过一些技术手段欺骗用户的浏览器去访问一个自己曾经认证过的网站并运行一些操作（如发邮件，发消息，甚至财产操作如转账和购买商品)。由于浏览器曾经认证过，所以被访问的网站会认为是真正的用户操作而去运行。这利用了web 中用户身份验证的一个漏洞：简单的身份验证只能保证请求发自某个用户的浏览器，却不能保证请求本身是用户自愿发出的。
+跨站请求攻击，简单地说，是攻击者通过一些技术手段欺骗用户的浏览器去访问一个自己曾经认证过的网站并运行一些操作（如发邮件，发消息，甚至财产操作如转账和购买商品)。由于浏览器曾经认证过，所以被访问的网站会认为是真正的用户操作而去运行。这利用了web 中用户身份验证的一个漏洞：简单的身份验证只能保证请求发自某个用户的浏览器，却不能保证请求本身是用户自愿发出的。
 
- 从 Spring Security 4.0 开始，默认情况下会启用CSRF 保护，以防止CSRF 攻击应用程序，Spring Security CSRF 会针对 PATCH，POST，PUT 和DELETE 方法进行防护。
+从 Spring Security 4.0 开始，默认情况下会启用CSRF 保护，以防止CSRF 攻击应用程序，Spring Security CSRF 会针对 PATCH，POST，PUT 和DELETE 方法进行防护。
 
 ### **3.10.2** 案例
 
- 在登录页面添加一个隐藏域：
+在登录页面添加一个隐藏域：
 
  ```html
- <input type="hidden"th:if="${_csrf}!=null"th:value="${_csrf.token}"name="_csrf"/>
+<input type="hidden"th:if="${_csrf}!=null"th:value="${_csrf.token}"name="_csrf"/>
  ```
 
 关闭安全配置的类中的csrf
@@ -1156,7 +1156,7 @@ http.logout().logoutUrl("/logout").logoutSuccessUrl("/index").permitAll();
 
 2. 请求到来时，从请求中提取 csrfToken，和保存的 csrfToken 做比较，进而判断当前请求是否合法。主要通过 CsrfFilter 过滤器来完成。
 
-![img](image/wps190.jpg) 
+![img](image/wps190.jpg)
 
 
 
@@ -1188,7 +1188,7 @@ http.logout().logoutUrl("/logout").logoutSuccessUrl("/index").permitAll();
 
 （2） 微服务的目的是有效的拆分应用，实现敏捷开发和部署。
 
- 
+
 
 ## **4.2** 微服务认证与授权实现思路
 
@@ -1198,9 +1198,9 @@ http.logout().logoutUrl("/logout").logoutSuccessUrl("/index").permitAll();
 
 （2） 如果是token，则是解析出 token，然后将当前请求加入到 Spring-security 管理的权限信息中去
 
-![img](image/wps199.jpg) 
+![img](image/wps199.jpg)
 
- 
+
 
 如果系统的模块众多，每个模块都需要进行授权与认证，所以我们选择基于 token 的形式进行授权与认证，用户根据用户名密码认证成功，然后获取当前用户角色的一系列权限 值，并以用户名为key，权限列表为value 的形式存入 redis 缓存中，根据用户名相关信息生成token 返回，浏览器将 token 记录到 cookie 中，每次调用 api 接口都默认将token 携带到 header 请求头中，Spring-security 解析 header 头获取 token 信息，解析 token 获取当前用户名，根据用户名就可以从redis 中获取权限列表，这样 Spring-security 就能够判断当前请求是否有权限访问
 
@@ -1210,7 +1210,7 @@ http.logout().logoutUrl("/logout").logoutSuccessUrl("/index").permitAll();
 
 ![img](image/wps201.jpg)
 
- 
+
 
 ## **4.3** **jwt** 介绍
 
@@ -1235,15 +1235,15 @@ http.logout().logoutUrl("/logout").logoutSuccessUrl("/index").permitAll();
 JWT 头部分是一个描述 JWT 元数据的 JSON 对象，通常如下所示。
 
  ```json
- {
-     "al": "HS256",
-     "typ": "JWT"
- }
+{
+    "al": "HS256",
+    "typ": "JWT"
+}
  ```
 
 在上面的代码中，alg 属性表示签名使用的算法，默认为 HMAC SHA256（写为 HS256）； typ 属性表示令牌的类型，JWT 令牌统一写为 JWT。最后，使用 Base64 URL 算法将上述JSON 对象转换为字符串保存。
 
- 
+
 
 **有效载荷**
 
@@ -1265,16 +1265,16 @@ iat：发布时间
 
 jti：JWT ID 用于标识该 JWT
 
- 
+
 
 除以上默认字段外，我们还可以自定义私有字段，如下例：
 
  ```json
- {
-     "sub": "1234567890",
-     "name": "Helen",
-     "admin": true
- }
+{
+    "sub": "1234567890",
+    "name": "Helen",
+    "admin": true
+}
  ```
 
 请注意，默认情况下 JWT 是未加密的，任何人都可以解读其内容，因此不要构建隐私信息字段，存放保密信息，以防止信息泄露。
@@ -1303,7 +1303,7 @@ HMACSHA256(base64UrlEncode(header) + "." + base64UrlEncode(claims), secret)
 
 ## **4.4** 具体代码实现
 
- ![img](image/wps207.png)
+![img](image/wps207.png)
 
 ### 4.3.1 编写核心配置类
 
@@ -1370,7 +1370,7 @@ redisTemplate) {
 
 ### 4.3.2 创建认证授权相关的工具类
 
- ![img](image/wps215.jpg)
+![img](image/wps215.jpg)
 
 
 
@@ -1460,7 +1460,7 @@ public class UnauthorizedEntryPoint implements AuthenticationEntryPoint {
 
 ### 4.3.3 创建认证授权实体类
 
- ![img](image/wps227.png)
+![img](image/wps227.png)
 
 **(1)** **SecutityUser**
 
@@ -1528,77 +1528,77 @@ public class SecurityUser implements UserDetails {
 **（2）User**
 
  ```java
- @Data
- @ApiModel(description = "用户实体类")
- public class User implements Serializable {
-      private String username;
-      private String password;
-      private String nickName;
-      private String salt;
-      private String token;
- }
+@Data
+@ApiModel(description = "用户实体类")
+public class User implements Serializable {
+  private String username;
+  private String password;
+  private String nickName;
+  private String salt;
+  private String token;
+}
  ```
 
 ### 4.3.4 创建认证和授权的filter
 
- ![img](image/wps235.png)
+![img](image/wps235.png)
 
 
 
- **（1）TokenLoginFilter：认证的 filter** 
+**（1）TokenLoginFilter：认证的 filter**
 
 ```java
 public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
-    private AuthenticationManager authenticationManager;
-    private TokenManager tokenManager;
-    private RedisTemplate redisTemplate;
-    public TokenLoginFilter(AuthenticationManager authenticationManager,
-        TokenManager tokenManager, RedisTemplate redisTemplate) {
-        this.authenticationManager = authenticationManager;
-        this.tokenManager = tokenManager;
-        this.redisTemplate = redisTemplate;
-        this.setPostOnly(false);
-        this.setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher("/admin/acl/login", "POST"));
-    }@
-    Override
-    public Authentication attemptAuthentication(HttpServletRequest req,
-        HttpServletResponse res)
-    throws AuthenticationException {
-        try {
-            User user = new ObjectMapper().readValue(req.getInputStream(),
-                User.class);
-            return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword(), new ArrayList < > ()));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+  private AuthenticationManager authenticationManager;
+  private TokenManager tokenManager;
+  private RedisTemplate redisTemplate;
+  public TokenLoginFilter(AuthenticationManager authenticationManager,
+                          TokenManager tokenManager, RedisTemplate redisTemplate) {
+    this.authenticationManager = authenticationManager;
+    this.tokenManager = tokenManager;
+    this.redisTemplate = redisTemplate;
+    this.setPostOnly(false);
+    this.setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher("/admin/acl/login", "POST"));
+  }@
+          Override
+  public Authentication attemptAuthentication(HttpServletRequest req,
+                                              HttpServletResponse res)
+          throws AuthenticationException {
+    try {
+      User user = new ObjectMapper().readValue(req.getInputStream(),
+              User.class);
+      return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword(), new ArrayList < > ()));
+    } catch (IOException e) {
+      throw new RuntimeException(e);
     }
-    /**
-     * 登录成功
-     */
-    @
-    Override
-    protected void successfulAuthentication(HttpServletRequest req,
-        HttpServletResponse res, FilterChain chain,
-        Authentication auth) throws
-    IOException, ServletException {
-        SecurityUser user = (SecurityUser) auth.getPrincipal();
-        String token tokenManager.createToken(user.getCurrentUserInfo().getUsername());
+  }
+  /**
+   * 登录成功
+   */
+  @
+          Override
+  protected void successfulAuthentication(HttpServletRequest req,
+                                          HttpServletResponse res, FilterChain chain,
+                                          Authentication auth) throws
+          IOException, ServletException {
+    SecurityUser user = (SecurityUser) auth.getPrincipal();
+    String token tokenManager.createToken(user.getCurrentUserInfo().getUsername());
 
-        redisTemplate.opsForValue().set(user.getCurrentUserInfo().getUsername(),
+    redisTemplate.opsForValue().set(user.getCurrentUserInfo().getUsername(),
             user.getPermissionValueList());
-        ResponseUtil.out(res, R.ok().data("token", token));
-    }
-    /**
-     * 登录失败
-     */
-    @
-    Override
-    protected void unsuccessfulAuthentication(HttpServletRequest request,
-        HttpServletResponse response,
-        AuthenticationException e) throws
-    IOException, ServletException {
-        ResponseUtil.out(response, R.error());
-    }
+    ResponseUtil.out(res, R.ok().data("token", token));
+  }
+  /**
+   * 登录失败
+   */
+  @
+          Override
+  protected void unsuccessfulAuthentication(HttpServletRequest request,
+                                            HttpServletResponse response,
+                                            AuthenticationException e) throws
+          IOException, ServletException {
+    ResponseUtil.out(response, R.error());
+  }
 }
 ```
 
@@ -1606,60 +1606,60 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
 
 ```java
 public class TokenAuthenticationFilter extends BasicAuthenticationFilter {
-    private TokenManager tokenManager;
-    private RedisTemplate redisTemplate;
-    public TokenAuthenticationFilter(AuthenticationManager authManager,
-        TokenManager tokenManager, RedisTemplate redisTemplate) {
-        super(authManager);
-        this.tokenManager = tokenManager;
-        this.redisTemplate = redisTemplate;
-    }@
-    Override
-    protected void doFilterInternal(HttpServletRequest req,
-        HttpServletResponse res, FilterChain chain)
-    throws IOException, ServletException {
-        logger.info("=================" + req.getRequestURI());
-        if (req.getRequestURI().indexOf("admin") == -1) {
-            chain.doFilter(req, res);
-            return;
-        }
-        UsernamePasswordAuthenticationToken authentication = null;
-        try {
-            authentication = getAuthentication(req);
-        } catch (Exception e) {
-            ResponseUtil.out(res, R.error());
-        }
-        if (authentication != null) {
+  private TokenManager tokenManager;
+  private RedisTemplate redisTemplate;
+  public TokenAuthenticationFilter(AuthenticationManager authManager,
+                                   TokenManager tokenManager, RedisTemplate redisTemplate) {
+    super(authManager);
+    this.tokenManager = tokenManager;
+    this.redisTemplate = redisTemplate;
+  }@
+          Override
+  protected void doFilterInternal(HttpServletRequest req,
+                                  HttpServletResponse res, FilterChain chain)
+          throws IOException, ServletException {
+    logger.info("=================" + req.getRequestURI());
+    if (req.getRequestURI().indexOf("admin") == -1) {
+      chain.doFilter(req, res);
+      return;
+    }
+    UsernamePasswordAuthenticationToken authentication = null;
+    try {
+      authentication = getAuthentication(req);
+    } catch (Exception e) {
+      ResponseUtil.out(res, R.error());
+    }
+    if (authentication != null) {
 
-            SecurityContextHolder.getContext().setAuthentication(authentication);
-        } else {
-            ResponseUtil.out(res, R.error());
-        }
-        chain.doFilter(req, res);
+      SecurityContextHolder.getContext().setAuthentication(authentication);
+    } else {
+      ResponseUtil.out(res, R.error());
     }
-    private UsernamePasswordAuthenticationToken
-    getAuthentication(HttpServletRequest request) {
-        // token 置于 header 里
-        String token = request.getHeader("token");
-        if (token != null && !"".equals(token.trim())) {
-            String userName = tokenManager.getUserFromToken(token);
-            List < String > permissionValueList = (List < String > )
-            redisTemplate.opsForValue().get(userName);
-            Collection < GrantedAuthority > authorities = new ArrayList < > ();
-            for (String permissionValue: permissionValueList) {
-                if (StringUtils.isEmpty(permissionValue)) continue;
-                SimpleGrantedAuthority authority = new
+    chain.doFilter(req, res);
+  }
+  private UsernamePasswordAuthenticationToken
+  getAuthentication(HttpServletRequest request) {
+    // token 置于 header 里
+    String token = request.getHeader("token");
+    if (token != null && !"".equals(token.trim())) {
+      String userName = tokenManager.getUserFromToken(token);
+      List < String > permissionValueList = (List < String > )
+              redisTemplate.opsForValue().get(userName);
+      Collection < GrantedAuthority > authorities = new ArrayList < > ();
+      for (String permissionValue: permissionValueList) {
+        if (StringUtils.isEmpty(permissionValue)) continue;
+        SimpleGrantedAuthority authority = new
                 SimpleGrantedAuthority(permissionValue);
-                authorities.add(authority);
-            }
-            if (!StringUtils.isEmpty(userName)) {
-                return new UsernamePasswordAuthenticationToken(userName, token,
-                    authorities);
-            }
-            return null;
-        }
-        return null;
+        authorities.add(authority);
+      }
+      if (!StringUtils.isEmpty(userName)) {
+        return new UsernamePasswordAuthenticationToken(userName, token,
+                authorities);
+      }
+      return null;
     }
+    return null;
+  }
 }
 ```
 
@@ -1703,9 +1703,9 @@ AuthenticationException 异常。
 
 （14）FilterSecurityInterceptor：可以看做过滤器链的出口。
 
-（15）RememberMeAuthenticationFilter：当用户没有登录而直接访问资源时, 从 cookie 
+（15）RememberMeAuthenticationFilter：当用户没有登录而直接访问资源时, 从 cookie
 
-里找出用户的信息, 如果 Spring Security 能够识别出用户提供的 remember me cookie, 
+里找出用户的信息, 如果 Spring Security 能够识别出用户提供的 remember me cookie,
 
 用户将不必填写用户名和密码, 而是直接登录进入系统，该过滤器默认不开启。
 
@@ -1717,7 +1717,7 @@ AuthenticationException 异常。
 
 ![img](image/wps250.png)
 
- 
+
 
 绿色部分是认证过滤器，需要我们自己配置，可以配置多个认证过滤器。认证过滤器可以使用Spring Security 提供的认证过滤器，也可以自定义过滤器（例如：短信验证）。认证过滤器要在configure(HttpSecurity http)方法中配置，没有配置不生效。下面会重点介绍以下三个过滤器：
 
@@ -1735,33 +1735,33 @@ FilterSecurityInterceptor 过滤器：该过滤器是过滤器链的最后一个
 
 ![img](image/wps252.png)
 
- 
+
 
 ### **5.3.1** UsernamePasswordAuthenticationFilter源码
 
- 当前端提交的是一个 POST 方式的登录表单请求，就会被该过滤器拦截，并进行身份认证。该过滤器的 doFilter() 方法实现在其抽象父类
+当前端提交的是一个 POST 方式的登录表单请求，就会被该过滤器拦截，并进行身份认证。该过滤器的 doFilter() 方法实现在其抽象父类
 
 AbstractAuthenticationProcessingFilter **中，查看相关源码：**
 
-![img](image/wps253.jpg) 
+![img](image/wps253.jpg)
 
 ![img](image/wps254.jpg)
 
-![img](image/wps255.jpg)![img](image/wps256.jpg)![img](image/wps257.jpg) 
+![img](image/wps255.jpg)![img](image/wps256.jpg)![img](image/wps257.jpg)
 
 上述的 第二 过程调用了 UsernamePasswordAuthenticationFilter的**attemptAuthentication**() 方法，源码如下：**
 
-![img](image/wps259.jpg) 
+![img](image/wps259.jpg)
 
 ![img](image/wps260.jpg)
 
-![img](image/wps261.jpg) 
+![img](image/wps261.jpg)
 
 上述的（3）过程创建的UsernamePasswordAuthenticationToken是Authentication 接口的实现类，该类有两个构造器，一个用于封装前端请求传入的未认证的用户信息，一个用于封装认证成功后的用户信息：
 
-![img](image/wps263.jpg) 
+![img](image/wps263.jpg)
 
- 
+
 
 **Authentication 接口的实现类用于存储用户认证信息，查看该接口具体定义：**
 
@@ -1775,17 +1775,17 @@ ProviderManager 是 AuthenticationManager 接口的实现类，该接口是认�
 
 ![img](image/wps267.jpg)
 
-![img](image/wps268.jpg) 
+![img](image/wps268.jpg)
 
-![img](image/wps269.jpg) 
+![img](image/wps269.jpg)
 
 ![img](image/wps270.jpg)
 
- 
+
 
 上述认证成功之后的（6）过程，调用CredentialsContainer接口定义的eraseCredentials()方法去除敏感信息。查看UsernamePasswordAuthenticationToken实现的eraseCredentials()方法，该方法实现在其父类中：
 
-![img](image/wps272.jpg) 
+![img](image/wps272.jpg)
 
 ### **5.3.3** **认证成功/失败处理**
 
@@ -1795,17 +1795,17 @@ ProviderManager 是 AuthenticationManager 接口的实现类，该接口是认�
 
 ![img](image/wps274.jpg)
 
- ![img](image/wps275.jpg)
+![img](image/wps275.jpg)
 
 ![img](image/wps277.png)
 
 ## **5.4** SpringSecurity权限访问流程
 
- 
+
 
 上一个部分通过源码的方式介绍了认证流程，下面介绍权限访问流程，主要是对ExceptionTranslationFilter过滤器和FilterSecurityInterceptor过滤器进行介绍。
 
- 
+
 
 ### **5.4.1** **ExceptionTranslationFilter过滤器**
 
@@ -1817,33 +1817,33 @@ ProviderManager 是 AuthenticationManager 接口的实现类，该接口是认�
 
 **FilterSecurityInterceptor** 是过滤器链的最后一个过滤器，该过滤器是过滤器链的最后一个过滤器，根据资源权限配置来判断当前请求是否有权限访问对应的资源。如果访问受限会抛出相关异常，最终所抛出的异常会由前一个过滤器**ExceptionTranslationFilter** 进行捕获和处理。具体源码如下：
 
-![img](image/wps280.jpg) 
+![img](image/wps280.jpg)
 
 ![img](image/wps281.jpg)
 
- 需要注意，**Spring** **Security** 的过滤器链是配置在 SpringMVC 的核心组件DispatcherServlet 运行之前。也就是说，请求通过 **Spring** **Security** 的所有过滤器， 不意味着能够正常访问资源，该请求还需要通过 SpringMVC 的拦截器链。
+需要注意，**Spring** **Security** 的过滤器链是配置在 SpringMVC 的核心组件DispatcherServlet 运行之前。也就是说，请求通过 **Spring** **Security** 的所有过滤器， 不意味着能够正常访问资源，该请求还需要通过 SpringMVC 的拦截器链。
 
 ## **5.5** SpringSecurity请求间共享认证信息
 
 一般认证成功后的用户信息是通过 Session 在多个请求之间共享，那么 **Spring** **Security** 中是如何实现将已认证的用户信息对象 Authentication 与 Session 绑定的进行具体分析。
 
-![img](image/wps283.png) 
+![img](image/wps283.png)
 
- 
+
 
 - 在前面讲解认证成功的处理方法 successfulAuthentication() 时，有以下代码：
 
-![img](image/wps285.jpg) 
+![img](image/wps285.jpg)
 
 - 查看 SecurityContext 接口及其实现类 SecurityContextImpl ， 该类其实就是对Authentication 的封装：
 
 - 查看 SecurityContextHolder 类 ， 该类其实是对ThreadLocal的封装 ,存储SecurityContext 对象：
 
-![img](image/wps287.jpg) 
+![img](image/wps287.jpg)
 
 ![img](image/wps288.jpg)
 
-![img](image/wps289.jpg) 
+![img](image/wps289.jpg)
 
 ![img](image/wps290.jpg)
 
@@ -1855,6 +1855,6 @@ ProviderManager 是 AuthenticationManager 接口的实现类，该接口是认�
 
 认证成功的响应通过 **SecurityContextPersistenceFilter** 过滤器时，会从SecurityContextHolder 中取出封装了已认证用户信息对象 Authentication 的SecurityContext，放进 Session 中。当请求再次到来时，请求首先经过该过滤器，该过滤器会判断当前请求的 Session 是否存有 SecurityContext 对象，如果有则将该对象取出再次放入 SecurityContextHolder 中，之后该请求所在的线程获得认证用户信息，后续的资源访问不需要进行身份认证；当响应再次返回时，该过滤器同样从 SecurityContextHolder 取出SecurityContext 对象，放入 Session 中。具体源码如下：
 
- ![img](image/wps292.jpg) 
+![img](image/wps292.jpg)
 
 ![img](image/wps294.jpg) 
